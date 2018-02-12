@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Company Index</title>
+</head>
+<body>
+
+	{% if all_stocks %}
+	<ul>
+		{% for stock in all_stocks %}
+			<li> {{ stock.ticker }}</li>
+			<li> {{ stock.field  }}</li>
+			<li> {{ stock.value }}</li>
+			<hr>
+			
+		{% endfor %}
+	</ul>
+	
+	{% else %}
+		<h2>No Stocks to show</h2>
+	{% endif %}
+
+</body>
+</html>
